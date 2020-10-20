@@ -6,7 +6,6 @@ import com.thoughtworks.capability.gtb.restfulapidesign.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.security.PermitAll;
 import java.util.List;
 
 /**
@@ -48,8 +47,5 @@ public class StudentController {
                            @RequestBody StudentDto studentDto){
         studentService.updateStudentById(id,studentDto);
     }
-
-
-
 
 }

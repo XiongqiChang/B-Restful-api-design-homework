@@ -18,10 +18,13 @@ public class GlobalExceptionHandler {
         return  ResponseEntity.badRequest().body(e.getError());
     }
 
-
     @ExceptionHandler
     public ResponseEntity<Error> handle(StudentHasExistException e){
         return  ResponseEntity.badRequest().body(e.getError());
     }
 
+    @ExceptionHandler
+    public ResponseEntity<Error> handle(GroupNotExistException e){
+        return  ResponseEntity.badRequest().body(e.getError());
+    }
 }

@@ -4,14 +4,14 @@ import lombok.Getter;
 
 /**
  * @Author: xqc
- * @Date: 2020/10/20 - 10 - 20 - 17:06
+ * @Date: 2020/10/20 - 10 - 20 - 17:40
  * @Description: com.thoughtworks.capability.gtb.restfulapidesign.exception
  * @version: 1.0
  */
 @Getter
-public class StudentHasExistException extends  RuntimeException {
+public class GroupNotExistException extends  RuntimeException {
     private Error error;
-    public  StudentHasExistException(Integer code, String message){
+    public  GroupNotExistException(Integer code, String message){
         error = new Error(code,message);
     }
 }

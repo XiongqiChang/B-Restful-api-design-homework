@@ -13,7 +13,7 @@ import java.util.List;
  * @version: 1.0
  */
 @Repository
-public class TeamRepository {
+public class GroupRepository {
 
     private static final List<Group> GROUP_LIST = new ArrayList<>();
 
@@ -28,6 +28,4 @@ public class TeamRepository {
     public List<Group> getGroupList(){
         return GROUP_LIST;
     }
-
-
 }

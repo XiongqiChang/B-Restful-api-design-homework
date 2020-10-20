@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
  */
 @Service
 public class StudentService {
+
     private final StudentRepository studentRepository;
 
     public  StudentService(StudentRepository studentRepository){
@@ -66,12 +67,6 @@ public class StudentService {
         return collect.get(0);
     }
 
-    private List<Student> studentExistList(String name){
-       return studentRepository.getStudentList()
-                .stream().filter(item -> item.getName().equals(name))
-                .collect(Collectors.toList());
-    }
-
     public void updateStudentById(Integer id, StudentDto studentDto) {
 
         Student student = studentRepository.getStudentList().stream()
@@ -90,5 +85,11 @@ public class StudentService {
         if (studentDto.getName() != null){
             student.setName(studentDto.getName());
         }
+    }
+
+    private List<Student> studentExistList(String name){
+        return studentRepository.getStudentList()
+                .stream().filter(item -> item.getName().equals(name))
+                .collect(Collectors.toList());
     }
 }
